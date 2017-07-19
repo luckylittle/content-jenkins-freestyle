@@ -1,0 +1,42 @@
+Started by an SCM change
+Building in workspace /var/jenkins_home/workspace/Lab Freestyle
+Cloning the remote Git repository
+Cloning repository git@github.com:luckylittle/content-jenkins-freestyle.git
+ > git init /var/jenkins_home/workspace/Lab Freestyle # timeout=10
+Fetching upstream changes from git@github.com:luckylittle/content-jenkins-freestyle.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:luckylittle/content-jenkins-freestyle.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url git@github.com:luckylittle/content-jenkins-freestyle.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:luckylittle/content-jenkins-freestyle.git # timeout=10
+Fetching upstream changes from git@github.com:luckylittle/content-jenkins-freestyle.git
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress git@github.com:luckylittle/content-jenkins-freestyle.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 7f3ea7c015a5c24e6f091cda05cf5eab4e77eda9 (refs/remotes/origin/master)
+Commit message: "Update README.md"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7f3ea7c015a5c24e6f091cda05cf5eab4e77eda9
+First time build. Skipping changelog.
+[Lab Freestyle] $ /bin/sh -xe /tmp/hudson1287460677995182433.sh
++ echo Lab Freestyle [1]
+Lab Freestyle [1]
+[Lab Freestyle] $ /bin/sh -xe /tmp/hudson3665358752924727249.sh
++ echo Building Java Code
+Building Java Code
++ javac -d . src/Rectangle.java src/Rectangulator.java
++ echo Main-Class: Rectangulator
++ jar -cmf MANIFEST.MF rectangle.jar Rectangle.class Rectangulator.class
+[Lab Freestyle] $ /bin/sh -xe /tmp/hudson7735679375594897622.sh
++ java -jar rectangle.jar 2 3
+*** Your Rectangle ***
+
+Length: 2
+Width: 3
+Area: 6
+Perimeter: 10
+
+
+Finished: SUCCESS
